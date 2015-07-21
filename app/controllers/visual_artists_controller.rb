@@ -1,4 +1,5 @@
 class VisualArtistsController < ApplicationController
+
 	# before_action :authenticate_user!
 	before_action :find_visual_artist, only: [:edit, :show, :update, :destroy]
 
@@ -11,7 +12,7 @@ class VisualArtistsController < ApplicationController
 
   def new
 		@visual_artist = VisualArtist.new
-		@visual_artist.addresses.build
+		@visual_artist.address.build
   end
 
 	def create

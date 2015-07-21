@@ -1,9 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe Profile, type: :model do
+RSpec.describe User, type: :model do
 
   context "class methods" do
     describe "relationships" do
+
       it "has one" do
         should have_one(:profile)
       end

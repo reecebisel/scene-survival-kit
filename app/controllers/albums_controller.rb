@@ -47,7 +47,7 @@ before_action :find_album, only: [:edit, :update, :show, :destroy]
   private
 
     def find_album
-      @album = Album.find_by(params[:id])
+      @album = Album.find_by_id(params[:id])
       # unless @album
       #   render status: 404
       # end

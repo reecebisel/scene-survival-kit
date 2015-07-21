@@ -32,4 +32,8 @@ group :development, :test do
 	gem 'shoulda-matchers'
 	gem 'faker'
 	gem 'literate_randomizer'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
 end
+

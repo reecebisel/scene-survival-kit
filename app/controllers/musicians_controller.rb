@@ -13,7 +13,7 @@ before_action :find_musician, only: [:edit, :show, :update, :destroy]
 
   def new
 		@musician = Musician.new
-		@musician.address.build
+		Musician.address.build
   end
 
 	def create 

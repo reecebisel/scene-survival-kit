@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe AlbumsController, type: :controller do
 
+let(:album) {Album.create(album_name: 'Lateralus')}
+
   describe "GET #index" do
     it "returns http success" do
       get :index
@@ -18,14 +20,14 @@ RSpec.describe AlbumsController, type: :controller do
 
   describe "GET #show" do
     it "returns http success" do
-      get :show
+      get :show, id: album.id
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET #edit" do
     it "returns http success" do
-      get :edit
+      get :edit, id: album.id
       expect(response).to have_http_status(:success)
     end
   end

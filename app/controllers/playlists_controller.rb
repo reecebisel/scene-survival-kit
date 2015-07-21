@@ -44,7 +44,7 @@ before_action :find_playlist, only: [:edit, :update, :show, :destroy]
   private
 
     def find_playlist
-      @playlist = Playlist.find_by(id: params[:id])  
+      @playlist = Playlist.find_by_id(params[:id])  
     end
 
     def playlist_params
