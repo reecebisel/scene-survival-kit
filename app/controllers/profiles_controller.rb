@@ -5,6 +5,9 @@ before_action :find_profile, only: [:edit, :update, :show, :destroy]
 
   def index
 		@profiles = Profile.search(params[:search])
+		# @visual_artists = VisualArtist.search(params[:search])
+		# @musicians = Musician.search(params[:search])
+		# @venue_reps = VenueRep.search(params[:search])
 	end
 	
   def show
