@@ -8,11 +8,12 @@ RSpec.describe Venue, type: :model do
       it "belongs to" do
         should belong_to(:event)
         should belong_to(:venue_rep)
+        should have_many(:addresses)
       end
 
-      it "has one" do
-        should have_one(:address)
-      end
+      # it "has one" do
+      #   should have_one(:address)
+      # end
     end
   end
 
