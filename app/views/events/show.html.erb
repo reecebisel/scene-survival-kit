@@ -1,9 +1,10 @@
 <section class="events_background">
 	<section class="container">
 
+<div id="wrapper">
 	<div class="row">
 		<h1><%= @event.event_name %></h1>
-			<div id="microphone" class="col-md-7">
+			<div id="microphone" class="col-md-10">
 			  <h2><%= image_tag @event.image.url(:medium) %></h2>
 				<div class="whitesmoke">
 					<h2><%= @event.event_date %> at <%= @event.start_time %></h2>
@@ -17,10 +18,7 @@
 		<a class="nav_tags"><%= link_to("Delete", event_path(@event.id), method: :delete) %></a>
 		<a class="nav_tags"><%= link_to("Add another event", new_event_path) %></a>
 	</div>
-
-		
-
-
-
+</div>
+	
   </section>
 </section>

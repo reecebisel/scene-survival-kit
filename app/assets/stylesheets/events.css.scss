@@ -1,66 +1,30 @@
-/*
-#events .calendar {
-  border-collapse: collapse;
-  width: 80%;
-}
-
-td, th {
-  font-size: 30px;
-  padding: 6px;
-  border: 1px solid #999;
-}
-
-th {
-  background: #DDD;
-  color: #666;
-  text-align: center;
-  width: 14.2857142857143%;
-}
-
-td {
-  background: #FFF;
-  color: #777;
-  height: 80px;
-  vertical-align: top;
-  font-size: 16px;
-}
-
-  .notmonth { color: #CCC; }
-  .today { background-color: #07F2FF; }
-
-#events #month {
-  margin: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: left;
-  a {
-    text-decoration: none;
-    padding: 0 10px;
-    color: #999;
-    }
-  }
-
-#events ul {
-  font-size: 11px;
-  padding-left: 20px;
-}
-
-.form {
-margin-left: 200px;
-}
-*/
-
-
-/*====================================================*/
-
 #uber_background {
   background-color: silver;
 }
 
+.nav_tags {
+  padding: 10px;
+}
+
 .events_background {
-  background-color: black;
-  color: silver;
+  background-color: #f8f8f8;
   padding: 20px;
+}
+
+.dark_orange {
+  color: #E46700;
+}
+
+.silver_text {
+  color: silver;
+}
+
+.grey_text {
+  color: grey;
+}
+
+.black_text {
+  color: black;
 }
 
 #microphone {
@@ -84,7 +48,7 @@ margin-left: 200px;
   border: 2px solid gray;
   margin-bottom: 30px;
   .month_header {
-    background-color: gray;
+    background-color: #E46700;   /*! table header */
     .span1 {
       padding-top: 5px;
       font-weight: bold;
@@ -96,7 +60,7 @@ margin-left: 200px;
   }
   .notmonth, .notmonth a { color: white; }
   .month.today { 
-    background-color: lightblue; 
+    background-color: #79879E; 
 }
 
   .month {

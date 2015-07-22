@@ -1,3 +1,5 @@
+<section class="events_background">
+	<div id="wrapper">
 <div class="container">
 	<h1 class="text-center browse-header">Profiles</h1>
 			<% @profiles.each do |profile| %>
@@ -5,5 +7,8 @@
 				<%= link_to(profile.name, profile_path(profile.id)) %></p>
 			<% end %> 
 </div>
+
+</div>
+</section>
 
 	
