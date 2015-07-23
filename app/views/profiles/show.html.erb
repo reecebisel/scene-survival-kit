@@ -10,6 +10,8 @@
 											<p> <%= @profile.bio %></p>
 	                </h1>
 
+                    <%= link_to("Message", new_message_path(message_receiver_id: @profile.id)) %>
+                    <% binding.pry %>
 										<%= link_to("Back", profiles_path(@profile.id)) %>
 										<%= link_to("Edit", edit_profile_path(@profile.id)) %>
 										<%= link_to("Delete", profile_path(@profile.id), method: :delete) %>
@@ -29,4 +31,4 @@
 	        </div>
 	    </div>
 	</div>
-</div>
+

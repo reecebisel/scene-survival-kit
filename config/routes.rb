@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'pages/welcome', as: :welcome
   get 'pages/choose_profile', as: :choose_profile
-
+  
   devise_for :users, controllers: { registrations: "registrations" }
 
   root 'visitors#index'
@@ -18,7 +18,10 @@ Rails.application.routes.draw do
   resources :venues
   resources :albums
   resources :photos
+  resources :messages
+  resources :replies
   resources :searches 
+
   
 
   # Example of regular route:
