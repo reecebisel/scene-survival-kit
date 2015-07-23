@@ -64,4 +64,7 @@ private
 		params.require(:musician).permit(:instrument, :genre, :profile_id, :created_at, :updated_at, addresses_attributes: [:id, :street, :city, :state, :zip, :musician_id, :latitude, :longitude])
 	end
 
+	def find_profile
+		@profile = Profile.find_by(id: params[:profile_id])
+	end
 end
