@@ -127,23 +127,27 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row no-gutter">
+            <div class="row no-gutter"> 
+                <!-- loop through 6 random profiles including their picture and type on each page reload -->
+                <%= 6.times do |profile| %>
+                <%= profile = random_profile %>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="/assets/portfolio/1.jpg" class="img-responsive" alt="">
+                        <%= image_tag profile.image.url(:medium), class: "img-responsive"  %>
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Profile Type
+                                    <%= profile.name %>
                                 </div>
                                 <div class="project-name">
-                                    Profile Name
+                                    <%= profile_type(profile) %>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <% end %>
+               <!--  <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
                         <img src="/assets/portfolio/2.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -217,7 +221,7 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </div> -->
                 <div class="container text-center">
                     <div class="call-to-action">
                         <br/><br/><br/>
