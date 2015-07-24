@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721195942) do
-
+ActiveRecord::Schema.define(version: 20150724171817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,16 +39,6 @@ ActiveRecord::Schema.define(version: 20150721195942) do
     t.integer  "profile_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-  end
-
-  create_table "characters", force: :cascade do |t|
-    t.string   "title"
-    t.string   "address"
-    t.float    "longitude"
-    t.float    "latitude"
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -162,6 +151,8 @@ ActiveRecord::Schema.define(version: 20150721195942) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "full_name"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
