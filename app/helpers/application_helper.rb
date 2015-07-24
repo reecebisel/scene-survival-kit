@@ -4,16 +4,16 @@ module ApplicationHelper
     Profile.find(profile_id)
   end
 
-  def random_profile
-    Profile.all.sample
+  def six_random_profiles
+    Profile.all.sample(6)
   end
 
   def profile_type(profile)
-    if Profile.musician.any?
+    if profile.musician.present?
       'Musician'
-    elsif Profile.venue_rep.any?
+    elsif profile.venue_rep.present?
       'Venue Rep.'
-    elsif Profile.visual_artist.any?
+    elsif profile.visual_artist.present?
       'Visual Artist'
     else
       ' '
