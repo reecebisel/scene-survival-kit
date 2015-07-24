@@ -15,11 +15,10 @@ class AddressesController < ApplicationController
   end
 
 	def create
-
 		@address = Address.new(address_params)
+		@address.address = "#{:latitude}, #{:longitude}, #{:street}, #{:city}, #{:state}, #{:zip}, #{:visual_artist_id}"
 		@musician = current_user.profile.musician
 		@address.musician_id = @musician.id
-		binding.pry
 		if @address.save
 			flash[:notice]= "Address created!"
 			redirect_to addresses_path

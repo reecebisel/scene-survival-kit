@@ -1,2 +1,7 @@
-<h1>VenueReps#index</h1>
-<p>Find me in app/views/venue_reps/index.html.erb</p>
+<div class="container">
+  <h1 class="text-center browse-header">Venue Reps</h1>
+      <% @venue_reps.each do |venue_rep| %>
+        <p class="inline-block"><%= image_tag venue_rep.image.url(:medium) %></br>
+        <%= link_to(venue_rep.name, venue_rep_path(venue_rep.id)) %></p>
+      <% end %> 
+</div>
