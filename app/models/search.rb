@@ -3,7 +3,7 @@ class Search < ActiveRecord::Base
 		profiles = Profile.all
 		profile = profiles.where(["name LIKE ? OR bio LIKE ?", "%#{keywords}%", "%#{keywords}%"]) if keywords.present?
 		
-		#finding musicians
+		#profile by musicians
 		profile = Profile.joins(:musician).where(:musicians => { :instrument => "#{instrument}" }) if instrument.present?
 		profile = Profile.joins(:musician).where(:musicians => { :genre => "#{genre}" }) if genre.present?
 
