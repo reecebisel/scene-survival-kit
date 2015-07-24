@@ -2,16 +2,15 @@ class Search < ActiveRecord::Base
 	def search_profile
 		profiles = Profile.all
 		profile = profiles.where(["name LIKE ? OR bio LIKE ?", "%#{keywords}%", "%#{keywords}%"]) if keywords.present?
+		
+		#finding musicians
+		profile = Profile.joins(:musician).where(:musicians => { :instrument => "#{instrument}" }) if instrument.present?
+		profile = Profile.joins(:musician).where(:musicians => { :genre => "#{genre}" }) if genre.present?
+
+		#find by address
 		profile = Profile.joins(:musician).where(:musicians => { :instrument => "#{instrument}" }) if instrument.present?
 		return profile
 	end
-
-	# def search_musician
-	# 	musicians = Musician.all
-	# 	musician = musicians.where(["instrument LIKE ?", "%#{instrument}%"]) if instrument.present?
-	# 	musician = musicians.where(["genre LIKE ?", "%#{genre}"]) if genre.present?
-	# 	return musician
-	# end
 
 # 	def search_address
 # 		musician = Musician.joins(:addresses).where(addresses: {"zip LIKE ?", "%#{zip}%"}) if zip.present?
