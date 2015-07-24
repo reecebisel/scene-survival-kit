@@ -63,5 +63,4 @@ private
 	def musician_params
 		params.require(:musician).permit(:instrument, :genre, :profile_id, :created_at, :updated_at, addresses_attributes: [:id, :street, :city, :state, :zip, :musician_id, :latitude, :longitude])
 	end
-
 end

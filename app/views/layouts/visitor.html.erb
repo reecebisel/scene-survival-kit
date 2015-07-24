@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SceneSurvivalKit</title>
+    <title>BANDtality</title>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= csrf_meta_tags %>
 
@@ -127,97 +127,25 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row no-gutter">
+            <div class="row no-gutter"> <!-- loop through 6 random profiles including their picture and type on each page reload -->
+                <% profiles = six_random_profiles %>
+                <% profiles.each do |profile| %>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="/assets/portfolio/1.jpg" class="img-responsive" alt="">
+                        <%= image_tag profile.image.url(:medium), class: "img-responsive"  %>
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Profile Type
+                                    <%= profile.name %>
                                 </div>
                                 <div class="project-name">
-                                    Profile Name
+                                    <%= profile_type(profile) %>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="/assets/portfolio/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Profile Type
-                                </div>
-                                <div class="project-name">
-                                    Profile Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="/assets/portfolio/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Profile Type
-                                </div>
-                                <div class="project-name">
-                                    Profile Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="/assets/portfolio/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Profile Type
-                                </div>
-                                <div class="project-name">
-                                    Profile Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="/assets/portfolio/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Profile Type
-                                </div>
-                                <div class="project-name">
-                                    Profile Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="/assets/portfolio/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Profile Type
-                                </div>
-                                <div class="project-name">
-                                    Profile Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <% end %>
                 <div class="container text-center">
                     <div class="call-to-action">
                         <br/><br/><br/>
