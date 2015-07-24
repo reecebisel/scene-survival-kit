@@ -13,9 +13,9 @@
           <%= link_to(profile.name, profile_path(profile.id), class: "btn btn-warning btn-md") %></p>
         <% end %> 
   </div>
-
+  <%= will_paginate @profiles %>
 </div>
-    <a class="text-center"><%= will_paginate @profiles %></a>
+    
 
 </div>
 
