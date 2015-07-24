@@ -85,20 +85,20 @@
                             <%= link_to(" Home", welcome_path, class: "fa fa-fw fa-home") %>
                         </li>
                         <li> 
-                            <%= link_to(" My Profile", profile_path(id: current_user.id), class: "fa fa-fw fa-user") %>
+                            <%= link_to(" My Profile", profile_path(id: current_user.profile.id), class: "fa fa-fw fa-user") %>
                         </li>
-                        <li>
-                            <%= link_to(" Messages", welcome_path, class: "fa fa-fw fa-envelope-o") %>
+                        <li>    
+                            <%= link_to(" Messages", messages_path, class: "fa fa-fw fa-envelope-o") %>
                         </li>
                         <li>
                             <%= link_to(" Events", events_path, class: "fa fa-fw fa-bullhorn") %>
                         </li>
                         <li>
-                            <%= link_to(" Dating", welcome_path, class: "fa fa-fw fa-heart-o") %>
+                            <%= link_to(" Dating", profiles_path, class: "fa fa-fw fa-heart-o") %>
                         </li>
-                        <li>
-                            <%= link_to(" Forum", welcome_path, class: "fa fa-fw fa-forumbee") %>
-                        </li>
+<!--                         <li>
+                            <%#= link_to(" Forum", welcome_path, class: "fa fa-fw fa-forumbee") %>
+                        </li> -->
                         <li>
                             <%= link_to("Search", welcome_path, class: "fa fa-fw fa-file")%>
                         </li>
