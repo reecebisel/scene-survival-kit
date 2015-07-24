@@ -1,14 +1,10 @@
 #uber_background {
-  background-color: silver;
+  background-color: #ebebeb;
+  padding: 20px;
 }
 
 .nav_tags {
   padding: 10px;
-}
-
-.events_background {
-  background-color: #f8f8f8;
-  padding: 20px;
 }
 
 .dark_orange {
@@ -27,16 +23,33 @@
   color: black;
 }
 
-#microphone {
-  background-image: image-url('blue_mic.jpg');
+.events_header_text {
+  font-family: Arial;
+  font-size: 50px;
+  color: black;
+}
+
+#calendar_img {
+  background-image: image-url('orange_mic.jpg');
   repeat: no-repeat;
   background-size: 100%;
 }
 
-#vector {
-  background-image: image-url('abstract.jpg');
+#calendar_background{
+  background-color: white;
+  padding-bottom: 20px;
+  border: 4px solid grey;
+}
+
+#show_img {
+  background-image: image-url('Faithless.jpg');
   repeat: no-repeat;
   background-size: 100%;
+}
+
+
+#event_show_background {
+  background-color: #10152e;
 }
 
 .whitesmoke {

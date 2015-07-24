@@ -1,10 +1,10 @@
-<section class="events_background">
+<section id="uber_background">
   <div id="wrapper">
-    <h1 class="text-center black_text"><b>Events</b></h1>	
+    <h1 class="text-center events_header_text">Events</h1>	
     <h3 class="text-center grey_text">Click on an event title to see more information.</h3>
   <!-- CALENDAR START -->
-    <div>
-      <h2 class="text-center grey_text">
+    <div id="calendar_background">
+      <h2 class="text-center gray_text">
         <%= link_to "<", date: @date.prev_month %>
         <%= @date.strftime("%B %Y") %>
         <%= link_to ">", date: @date.next_month %>
@@ -22,12 +22,13 @@
           <% end %>
         <% end %>
         </div>
+ <div class="row">
+      <a class="nav_tags"><%= link_to("Add an event", new_event_path) %></a>
+    </div>
       </div>
 
 
-    <div class="row">
-      <a class="nav_tags"><%= link_to("Add an event", new_event_path) %></a>
-    </div>
+   
 
   </div>
 </section>
