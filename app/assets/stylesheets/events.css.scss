@@ -3,8 +3,64 @@
   padding: 20px;
 }
 
+.events_background {
+  background-image: image-url('blue_lights.jpg');
+  repeat: no-repeat;
+  background-size: 100%;
+}
+
 .nav_tags {
   padding: 10px;
+}
+
+.roboto {
+font-family: 'Roboto', sans-serif;
+}
+
+.cabin {
+font-family: 'Cabin', sans-serif;
+}
+
+.abel {
+font-family: 'Abel', sans-serif;
+}
+
+.anton {
+font-family: 'Abel', sans-serif;
+}
+
+.wire_one {
+font-family: 'Wire One', sans-serif;
+
+}
+
+.permanent_marker {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 250%;
+}
+
+.rock_salt {
+  font-family: 'Rock Salt', cursive;
+}
+
+.droid_sans {
+font-family: 'Droid Sans Mono', ;
+}
+
+.shadows_into_light {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.architects_daughter {
+  font-family: 'Architects Daughter', cursive;
+}
+
+.gloria_hall {
+font-family: 'Gloria Hallelujah', cursive;
+}
+
+.amatic {
+  font-family: 'Amatic SC', cursive;
 }
 
 .dark_orange {
@@ -23,12 +79,6 @@
   color: black;
 }
 
-.events_header_text {
-  font-family: Arial;
-  font-size: 50px;
-  color: black;
-}
-
 #calendar_img {
   background-image: image-url('orange_mic.jpg');
   repeat: no-repeat;
@@ -41,15 +91,9 @@
   border: 4px solid grey;
 }
 
-#show_img {
-  background-image: image-url('Faithless.jpg');
-  repeat: no-repeat;
-  background-size: 100%;
-}
-
 
 #event_show_background {
-  background-color: #10152e;
+  align: center;
 }
 
 .whitesmoke {
