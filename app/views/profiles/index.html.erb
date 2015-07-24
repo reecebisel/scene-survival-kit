@@ -7,8 +7,11 @@
 				<%= link_to(profile.name, profile_path(profile.id)) %></p>
 			<% end %> 
 </div>
+    <%= will_paginate @profiles %>
 
 </div>
+
+
 </section>
 
 	

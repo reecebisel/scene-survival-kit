@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+ # omniauth stuff
+  get   '/login', :to => 'sessions#new', :as => :login
+  get '/auth/:provider/callback', :to => 'sessions#create'
+  get '/auth/failure', :to => 'sessions#failure'
+
+  
+
   get 'pages/welcome', as: :welcome
   get 'pages/choose_profile', as: :choose_profile
   

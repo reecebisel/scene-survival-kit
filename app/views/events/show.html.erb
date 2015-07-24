@@ -1,3 +1,4 @@
+<body>
 <section class="events_background">
 	<section class="container">
 
@@ -11,14 +12,17 @@
 					<p><%= @event.event_desc %></p>
 				</div>
 			</div>
+
 	</div>
 	<div class="row">
 		<a class="nav_tags"><%= link_to("Back", events_path) %></a>
 		<a class="nav_tags"><%= link_to("Edit", edit_event_path(@event.id)) %></a>
 		<a class="nav_tags"><%= link_to("Delete", event_path(@event.id), method: :delete) %></a>
 		<a class="nav_tags"><%= link_to("Add another event", new_event_path) %></a>
+
 	</div>
 </div>
 	
   </section>
 </section>
+</body>
