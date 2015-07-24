@@ -12,7 +12,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
-ActiveRecord::Schema.define(version: 20150721195942) do
+ActiveRecord::Schema.define(version: 20150724171817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,16 +42,6 @@ ActiveRecord::Schema.define(version: 20150721195942) do
     t.datetime "updated_at",       null: false
   end
 
-  create_table "characters", force: :cascade do |t|
-    t.string   "title"
-    t.string   "address"
-    t.float    "longitude"
-    t.float    "latitude"
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "events", force: :cascade do |t|
     t.string   "event_name"
     t.text     "event_desc"
@@ -67,6 +57,20 @@ ActiveRecord::Schema.define(version: 20150721195942) do
     t.datetime "image_updated_at"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "messages", force: :cascade do |t|
+    t.string   "subject"
+    t.text     "message_body",                        null: false
+    t.integer  "profile_id"
+    t.integer  "message_sender_id"
+    t.integer  "message_receiver_id"
+    t.boolean  "reply_read",          default: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+>>>>>>> omniauth
   create_table "musicians", force: :cascade do |t|
     t.string   "instrument"
     t.string   "genre"
@@ -112,6 +116,32 @@ ActiveRecord::Schema.define(version: 20150721195942) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+<<<<<<< HEAD
+=======
+  end
+
+  create_table "replies", force: :cascade do |t|
+    t.text     "reply_body"
+    t.integer  "message_id",                          null: false
+    t.integer  "profile_id"
+    t.integer  "message_sender_id"
+    t.integer  "message_receiver_id"
+    t.boolean  "reply_read",          default: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string   "keywords"
+    t.string   "category"
+    t.integer  "zip"
+    t.string   "state"
+    t.string   "instrument"
+    t.string   "genre"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> omniauth
   end
 
   create_table "users", force: :cascade do |t|
@@ -128,6 +158,8 @@ ActiveRecord::Schema.define(version: 20150721195942) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "full_name"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
