@@ -57,8 +57,7 @@ ActiveRecord::Schema.define(version: 20150724171817) do
     t.datetime "image_updated_at"
   end
 
-<<<<<<< HEAD
-=======
+
   create_table "messages", force: :cascade do |t|
     t.string   "subject"
     t.text     "message_body",                        null: false
@@ -70,7 +69,6 @@ ActiveRecord::Schema.define(version: 20150724171817) do
     t.datetime "updated_at",                          null: false
   end
 
->>>>>>> omniauth
   create_table "musicians", force: :cascade do |t|
     t.string   "instrument"
     t.string   "genre"
@@ -116,8 +114,6 @@ ActiveRecord::Schema.define(version: 20150724171817) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-<<<<<<< HEAD
-=======
   end
 
   create_table "replies", force: :cascade do |t|
@@ -141,7 +137,6 @@ ActiveRecord::Schema.define(version: 20150724171817) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
->>>>>>> omniauth
   end
 
   create_table "users", force: :cascade do |t|
