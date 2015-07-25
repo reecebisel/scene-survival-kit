@@ -16,12 +16,10 @@ before_action :find_address, only: [:edit, :show, :update, :destroy]
 
 	def create
 		@address = Address.new(address_params)
-<<<<<<< HEAD
 		@address.address = "#{:latitude}, #{:longitude}, #{:street}, #{:city}, #{:state}, #{:zip}, #{:visual_artist_id}"
 		@musician = current_user.profile.musician
 		@address.musician_id = @musician.id
-=======
->>>>>>> 95c88911c028286d9b6f735900c02ac9e82770da
+
 		if @address.save
 			flash[:notice]= "Address created!"
 			redirect_to addresses_path
