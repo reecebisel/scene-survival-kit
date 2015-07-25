@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :visual_artists
   resources :albums
   resources :photos
-  
+  resources :searches
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
