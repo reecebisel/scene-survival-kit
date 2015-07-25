@@ -11,6 +11,7 @@ class Search < ActiveRecord::Base
 		profile = Profile.joins(:visual_artist).where(:visual_artists => { :medium => "#{medium}" }) if medium.present?
 
 		#profile by venue rep attribute
+		profile = Profile.joins(:venue_rep).where(:venue_reps => { :venue => "#{venue}" }) if venue.present?
 
 		#find by address
 		return profile
